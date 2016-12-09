@@ -1,6 +1,6 @@
 1.默认初始大小为16，并且容量只能为2的指数次方
 
-     /**
+    /**
      * The default initial capacity - MUST be a power of two.
      */
     static final int DEFAULT_INITIAL_CAPACITY = 16;
@@ -66,6 +66,7 @@
 首先判断key是否为null，如果为null，则执行下面一段代码
 `
    private V getForNullKey() {
+   
         for (Entry<K,V> e = table[0]; e != null; e = e.next) {
             if (e.key == null)
                 return e.value;
